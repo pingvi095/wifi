@@ -1,0 +1,16 @@
+﻿<Window x:Class="wifi.AdminLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вход администратора" Height="210" Width="320" MinHeight = "210" MaxHeight = "210" MinWidth = "320" MaxWidth = "320"
+        WindowStartupLocation="CenterScreen" Background="#FF163832" ResizeMode="NoResize"
+      >
+    <StackPanel Margin="20">
+        <TextBlock Text="Введите логин администратора:" Margin="0,0,0,4" Foreground="White"/>
+        <TextBox x:Name="LoginBox" MaxLength="45" Margin="0,0,0,10" />
+
+        <TextBlock Text="Введите пароль:" Margin="0,0,0,4" Foreground="White"/>
+        <PasswordBox x:Name="PasswordBox" MaxLength="45" Margin="0,0,0,20" />
+
+        <Button Content="Войти" Width="100" HorizontalAlignment="Center" Click="Login_Click" Background="#FF8EB69B"/>
+    </StackPanel>
+</Window>
