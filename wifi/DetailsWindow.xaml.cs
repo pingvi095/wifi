@@ -60,7 +60,7 @@ namespace wifi
                 HoursText.Text = row["work_hours"].ToString();
                 WiFiText.Text = row["wifi_quality"].ToString();
                 RatingText.Text = Convert.ToDouble(row["rating"] == DBNull.Value ? 0.0 : row["rating"]).ToString("N1");
-                DescText.Text = row["description"].ToString();
+               
 
                 // Загрузка изображения, если оно указано и существует
                 var path = row["photo_path"].ToString();

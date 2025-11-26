@@ -35,9 +35,8 @@
             <TextBlock Text="Контакт (тел/почта):" Foreground="White"/>
             <TextBox x:Name="ContactBox" MaxLength="45" Margin="0,0,0,8" TextWrapping="Wrap"/>
 
-            <TextBlock Text="Краткое описание:" Foreground="White"/>
-            <TextBox x:Name="DescBox" MaxLength="100" Height="80" AcceptsReturn="True" 
-                     TextWrapping="Wrap" Margin="0,0,0,8"/>
+            
+            
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <Button Content="Выбрать фото..." Click="ChoosePhoto_Click" Margin="0,0,8,0"/>

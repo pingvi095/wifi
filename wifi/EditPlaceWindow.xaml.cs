@@ -63,7 +63,7 @@ namespace wifi
             AddressBox.Text = place.Address;
             WorkBox.Text = place.WorkHours;
             ContactBox.Text = place.Contact;
-            DescBox.Text = place.Description;
+            
 
             foreach (ComboBoxItem item in TypeBox.Items)
                 if (item.Content.ToString() == place.Type) { TypeBox.SelectedItem = item; break; }
@@ -84,13 +84,12 @@ namespace wifi
             var wifi = (WiFiBox.SelectedItem as ComboBoxItem)?.Content?.ToString()?.Trim() ?? "";
             var hours = WorkBox.Text.Trim();
             var contact = ContactBox.Text.Trim();
-            var desc = DescBox.Text.Trim();
+            
 
             // Проверка на заполнение всех полей
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(type) ||
                 string.IsNullOrWhiteSpace(address) || string.IsNullOrWhiteSpace(wifi) ||
-                string.IsNullOrWhiteSpace(hours) || string.IsNullOrWhiteSpace(contact) ||
-                string.IsNullOrWhiteSpace(desc))
+                string.IsNullOrWhiteSpace(hours) || string.IsNullOrWhiteSpace(contact))
             {
                 MessageBox.Show("Заполните все поля!");
                 return;
@@ -126,7 +125,6 @@ namespace wifi
                 { "@w", wifi },
                 { "@h", hours },
                 { "@c", contact },
-                { "@d", desc },
                 { "@id", place.Id }
             };
 
